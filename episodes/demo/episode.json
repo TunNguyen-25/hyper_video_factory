@@ -1,0 +1,19 @@
+{
+  "id": "demo",
+  "template": "faceless-listicle",
+  "duration": 12,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "content": {
+    "hook": "Bạn vẫn đang làm việc này bằng tay?",
+    "body": "Biến một ý tưởng thành video TikTok có thể tái sử dụng.",
+    "cta": "Theo dõi để xem phần tiếp theo"
+  },
+  "theme": {
+    "background": "#101114",
+    "foreground": "#f6f4ef",
+    "accent": "#ff4d67"
+  },
+  "assets": {}
+}

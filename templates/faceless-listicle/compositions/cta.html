@@ -1,0 +1,17 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: {{ACCENT}}; color: {{BACKGROUND}}; font-family: Inter, sans-serif; }
+    .cta-wrap { position: absolute; inset: 288px 120px 672px; box-sizing: border-box; display: grid; place-items: center; padding-bottom: 200px; text-align: center; }
+    .cta-copy { margin: 0; font-size: 82px; line-height: 1; font-weight: 900; letter-spacing: -3px; text-wrap: balance; }
+  </style>
+  <div id="root" data-composition-id="cta" data-width="{{WIDTH}}" data-height="{{HEIGHT}}">
+    <section id="cta-card" class="clip cta-wrap" data-start="0" data-duration="{{CTA_DURATION}}" data-track-index="0">
+      <p id="cta-copy" class="cta-copy">{{CTA}}</p>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#cta-copy", { opacity: 0, scale: 0.82 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.5)" }, 0);
+    window.__timelines["cta"] = tl;
+  </script>
+</template>

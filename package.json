@@ -1,0 +1,22 @@
+{
+  "name": "hyperframes-video-factory",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate.mjs",
+    "compile": "node scripts/compile.mjs",
+    "check": "node scripts/check.mjs",
+    "render": "node scripts/render.mjs",
+    "clean": "node scripts/clean.mjs",
+    "setup:check": "bash scripts/setup-machine.sh --check",
+    "setup:install": "bash scripts/setup-machine.sh --install"
+  },
+  "devDependencies": {
+    "hyperframes": "0.9.89"
+  }
+}

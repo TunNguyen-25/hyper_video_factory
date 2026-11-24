@@ -1,0 +1,21 @@
+<template>
+  <style>
+    #root { position: absolute; inset: 0; overflow: hidden; background: {{BACKGROUND}}; color: {{FOREGROUND}}; font-family: Inter, sans-serif; }
+    .hook-wrap { position: absolute; inset: 288px 120px 672px; display: grid; place-items: center; text-align: center; }
+    .hook-copy { margin: 0; font-size: 88px; line-height: 0.98; font-weight: 900; letter-spacing: -4px; text-wrap: balance; }
+    .hook-bar { width: 180px; height: 14px; margin: 52px auto 0; border-radius: 999px; background: {{ACCENT}}; }
+  </style>
+  <div id="root" data-composition-id="hook" data-width="{{WIDTH}}" data-height="{{HEIGHT}}">
+    <section id="hook-card" class="clip hook-wrap" data-start="0" data-duration="{{HOOK_DURATION}}" data-track-index="0">
+      <div id="hook-inner">
+        <h1 class="hook-copy">{{HOOK}}</h1>
+        <div class="hook-bar"></div>
+      </div>
+    </section>
+  </div>
+  <script>
+    const tl = gsap.timeline({ paused: true });
+    tl.fromTo("#hook-inner", { opacity: 1, y: 42, scale: 0.96 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "power4.out" }, 0);
+    window.__timelines["hook"] = tl;
+  </script>
+</template>
