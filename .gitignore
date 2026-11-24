@@ -12,6 +12,7 @@ frames/
 # Tool caches
 .cache/
 .superpowers/
+.worktrees/
 coverage/
 
 # Environment files and local secrets
